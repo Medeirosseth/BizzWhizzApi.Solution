@@ -18,6 +18,29 @@ namespace BizzWhizzApi.Controllers
         {
             _db = db; 
         }
+
+        private bool BusinessExists(int id) => _db.businesses.Any( b => b.BusinessId == id);
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Business>>> GetActionResultAsync()
+        => await _db.businesses.ToListAsync();
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Business>> GetBusiness(int id)
+        {
+            var business = await _db.businesses.FindAsync(id);
+            if ( business == null) return NotFound();
+            return business;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Business>> Post(Business bizz)
+        {
+            _db.businesses.Add(bizz);
+            await _db.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetBusiness), new {id = bizz.BusinessId }, bizz);
+        }
+
     }
 
 }
