@@ -4,10 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using ApiTemplate.Models;
+using BizzWhizzApi.Models;
 using Microsoft.OpenApi.Models;
 
-namespace ApiTemplate.Solution
+namespace BizzWhizzApi.Solution
 {
     public class Startup
     {
@@ -36,11 +36,11 @@ namespace ApiTemplate.Solution
             services.AddControllers();
 
             services.AddEntityFrameworkMySql()
-                .AddDbContext <ApiTemplateContext>(options => options
+                .AddDbContext <BizzWhizzApiContext>(options => options
                 .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
             services.AddSwaggerGen(c =>
             {
-               c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiTemplate.Solution", Version = "v1" });
+               c.SwaggerDoc("v1", new OpenApiInfo { Title = "BizzWhizzApi.Solution", Version = "v1" });
             });
         }
 
@@ -51,7 +51,7 @@ namespace ApiTemplate.Solution
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-               app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiTemplate.Solution v1"));
+               app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BizzWhizzApi.Solution v1"));
             }
 
             // app.UseHttpsRedirection();

@@ -2,19 +2,19 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ApiTemplate.Models;
+using BizzWhizzApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ProjectName.Controllers
+namespace BizzWhizzApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
 
-    public class ProjectNamesController : ControllerBase
+    public class BusinessesController : ControllerBase
     {
-        private readonly ApiTemplateContext _db;
+        private readonly BizzWhizzApiContext _db;
 
-        public ProjectNamesController(ApiTemplateContext db)
+        public BusinessesController(BizzWhizzApiContext db)
         {
             _db = db; 
         }

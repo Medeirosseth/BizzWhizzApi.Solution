@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
 
-namespace ApiTemplate.Solution
+namespace BizzWhizzApi.Solution
 {
     public class Program
     {
