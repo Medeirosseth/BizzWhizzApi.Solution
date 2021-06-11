@@ -41,6 +41,25 @@ namespace BizzWhizzApi.Controllers
             return CreatedAtAction(nameof(GetBusiness), new {id = bizz.BusinessId }, bizz);
         }
 
+        [HttpPut("id")]
+        public async Task<IActionResult> Put(int id, Business bizz)
+        {
+            if (id !=bizz.BusinessId) return BadRequest();
+
+            _db.Entry(bizz).State = EntityState.Modified;
+
+            try
+            {
+                await _db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!BusinessExists(id)) return NotFound();
+                else throw;
+            }
+            return NoContent();
+        }
+
     }
 
 }
