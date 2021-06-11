@@ -15,7 +15,7 @@
 
 ## Description:memo:
 
-_An Application Programming Interface that gives the user to create a database of business types, names, and locations. Users can see a list of businesses in the database. Users also have update and delete functionality_
+_An Application Programming Interface that gives the user the ability to create a database of business types, names, and locations. Users can see a list of businesses in the database. Users also have update and delete functionality_
 
 <details>
   <summary>Setup/installation Requirements:open_file_folder:</summary>
@@ -76,20 +76,10 @@ Explore BizzWhizz API endpoints in Vscodes extension Thunder Client or browser.
 to explore the BizzWhizz API with NSwag, launch the project using `dotnet watch run` with Terminal or PowerShell. The first page to appear will be: http://localhost:5000/swagger
 
 **Endpoints**
-GET - /api​/Businesses
-POST - ​/api​/Businesses
-GET - ​/api​/Businesses​/{id}
-DELETE - /api​/Businesses​/{id}
-PUT - /api​/Businesses​/id
+`GET - /api​/Businesses POST - ​/api​/Businesses GET - ​/api​/Businesses​/{id} DELETE - /api​/Businesses​/{id} PUT - /api​/Businesses​/id`
 
 **Sample JSON Response**
-{
-"businessId": 0,
-"businessType": "string",
-"businessName": "string",
-"businessLocation": "string",
-"rating": 0
-}
+`{ "businessId": 0, "businessType": "string", "businessName": "string", "businessLocation": "string", "rating": 0 }`
 
 </details>
 
