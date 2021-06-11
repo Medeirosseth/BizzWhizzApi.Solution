@@ -12,6 +12,7 @@ namespace BizzWhizzApi.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     
 
+
     public class BusinessesController : ControllerBase
     {
         private readonly BizzWhizzApiContext _db;
