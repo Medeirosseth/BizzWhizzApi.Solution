@@ -8,7 +8,9 @@ using Microsoft.EntityFrameworkCore;
 namespace BizzWhizzApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    
 
     public class BusinessesController : ControllerBase
     {
