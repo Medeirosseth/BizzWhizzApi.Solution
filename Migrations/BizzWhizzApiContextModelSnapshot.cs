@@ -28,7 +28,7 @@ namespace BizzWhizzApi.Migrations
                     b.Property<string>("BusinessName")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("MyProperty")
+                    b.Property<string>("BusinessType")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("Rating")

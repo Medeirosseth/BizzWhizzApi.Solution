@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BizzWhizzApi.Migrations
 {
     [DbContext(typeof(BizzWhizzApiContext))]
-    [Migration("20210611162003_Initial")]
+    [Migration("20210611175427_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,7 +30,7 @@ namespace BizzWhizzApi.Migrations
                     b.Property<string>("BusinessName")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("MyProperty")
+                    b.Property<string>("BusinessType")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("Rating")

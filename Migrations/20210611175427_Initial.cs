@@ -13,7 +13,7 @@ namespace BizzWhizzApi.Migrations
                 {
                     BusinessId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    MyProperty = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
+                    BusinessType = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     BusinessName = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     BusinessLocation = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     Rating = table.Column<int>(type: "int", nullable: false)

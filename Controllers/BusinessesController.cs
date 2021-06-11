@@ -60,6 +60,18 @@ namespace BizzWhizzApi.Controllers
             return NoContent();
         }
 
+        [HttpDelete("{id}")]
+        public async Task <IActionResult> DeleteBusiness(int id)
+        {
+            Business bizz = await _db.businesses.FindAsync(id);
+            if (bizz == null) return NotFound();
+
+            _db.businesses.Remove(bizz);
+            await _db.SaveChangesAsync();
+
+            return NoContent();
+        }
+
     }
 
 }
