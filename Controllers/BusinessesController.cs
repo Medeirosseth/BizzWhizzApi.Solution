@@ -21,6 +21,7 @@ namespace BizzWhizzApi.Controllers
         {
             _db = db; 
         }
+        
 
         private bool BusinessExists(int id) => _db.businesses.Any( b => b.BusinessId == id);
 
