@@ -75,6 +75,22 @@ Explore BizzWhizz API endpoints in Vscodes extension Thunder Client or browser.
 
 to explore the BizzWhizz API with NSwag, launch the project using `dotnet watch run` with Terminal or PowerShell. The first page to appear will be: http://localhost:5000/swagger
 
+**Endpoints**
+GET - /api​/Businesses
+POST - ​/api​/Businesses
+GET - ​/api​/Businesses​/{id}
+DELETE - /api​/Businesses​/{id}
+PUT - /api​/Businesses​/id
+
+**Sample JSON Response**
+{
+"businessId": 0,
+"businessType": "string",
+"businessName": "string",
+"businessLocation": "string",
+"rating": 0
+}
+
 </details>
 
 ## Known Bugs :no_entry_sign: :bug:
